@@ -1,0 +1,69 @@
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.dll
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.pdb
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\bin\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.resources
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.zh-CN.resources
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.dll
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.pdb
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.xml
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\ResolveAssemblyReference.cache
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\GenerateResource.read.1.tlog
+F:\eSchool.Jxss\JXUSIEP_CommonMS\WebControls\obj\Debug\GenerateResource.write.1.tlog
+F:\脱机\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.dll
+F:\脱机\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.pdb
+F:\脱机\JXUSIEP_CommonMS\WebControls\bin\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\ResolveAssemblyReference.cache
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.resources
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.zh-CN.resources
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\GenerateResource.read.1.tlog
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\GenerateResource.write.1.tlog
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.dll
+F:\脱机\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.pdb
+F:\脱机\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.xml
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.dll
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.pdb
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\bin\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\ResolveAssemblyReference.cache
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.resources
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.zh-CN.resources
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\GenerateResource.read.1.tlog
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\GenerateResource.write.1.tlog
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.dll
+F:\asp.net课设\JXUSIEP_CommonMS\JXUSIEP_CommonMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.pdb
+F:\asp.net课设\SCMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.dll
+F:\asp.net课设\SCMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.pdb
+F:\asp.net课设\SCMS\WebControls\bin\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\asp.net课设\SCMS\WebControls\obj\Debug\ResolveAssemblyReference.cache
+F:\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.resources
+F:\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.zh-CN.resources
+F:\asp.net课设\SCMS\WebControls\obj\Debug\GenerateResource.read.1.tlog
+F:\asp.net课设\SCMS\WebControls\obj\Debug\GenerateResource.write.1.tlog
+F:\asp.net课设\SCMS\WebControls\obj\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.dll
+F:\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.pdb
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.dll
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\bin\Debug\eSchool.Web.UI.WebControls.pdb
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\bin\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\ResolveAssemblyReference.cache
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.resources
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.zh-CN.resources
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\GenerateResource.read.1.tlog
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\GenerateResource.write.1.tlog
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.dll
+F:\学习文件\ASP.NET学习\asp.net课设\SCMS\WebControls\obj\Debug\eSchool.Web.UI.WebControls.pdb
+D:\visual studio 2010\Projects\server\WebControls\bin\Debug\eSchool.Web.UI.WebControls.xml
+D:\visual studio 2010\Projects\server\WebControls\bin\Debug\eSchool.Web.UI.WebControls.dll
+D:\visual studio 2010\Projects\server\WebControls\bin\Debug\eSchool.Web.UI.WebControls.pdb
+D:\visual studio 2010\Projects\server\WebControls\bin\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\ResolveAssemblyReference.cache
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.resources
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\eSchool.Web.UI.WebControls.Properties.Resources.zh-CN.resources
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\GenerateResource.read.1.tlog
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\GenerateResource.write.1.tlog
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\zh-CN\eSchool.Web.UI.WebControls.resources.dll
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\eSchool.Web.UI.WebControls.dll
+D:\visual studio 2010\Projects\server\WebControls\obj\Debug\eSchool.Web.UI.WebControls.pdb

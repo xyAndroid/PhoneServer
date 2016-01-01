@@ -1,0 +1,6 @@
+D:\visual studio 2010\Projects\server\Library\bin\Debug\SyncServer.dll.config
+D:\visual studio 2010\Projects\server\Library\bin\Debug\SyncServer.dll
+D:\visual studio 2010\Projects\server\Library\bin\Debug\SyncServer.pdb
+D:\visual studio 2010\Projects\server\Library\obj\Debug\ResolveAssemblyReference.cache
+D:\visual studio 2010\Projects\server\Library\obj\Debug\SyncServer.dll
+D:\visual studio 2010\Projects\server\Library\obj\Debug\SyncServer.pdb

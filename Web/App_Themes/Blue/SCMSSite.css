@@ -1,0 +1,551 @@
+﻿
+.login_top
+{
+    width: 1024px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("Images/JXUSIEP.png") no-repeat;
+}
+.login_expertsystem
+{
+    width: 230px;
+    position: relative;
+    top: 250px;
+    left: 190px;
+}
+.div_right_navi
+{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: 10px;
+    left: 560px;
+}
+.a_Style:Hover
+{
+    color: Red;
+    text-decoration: underline;
+}
+
+/*--------登录页.登录控件-----------*/
+.a_forgetpwd
+{
+    float: left;
+    width: 55px;
+    height: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    padding-top: 9px;
+    color: #20639E;
+}
+.a_forgetpwd:Hover
+{
+    color: red;
+    text-decoration: underline;
+}
+.div_username
+{
+    width: 203px;
+    height: 31px;
+    border: solid 1px #3197B5;
+    background-color: #F4F4F4;
+}
+.span_login_validator
+{
+    margin-top: 10px;
+}
+.div_regist
+{
+    float: left;
+    width: 140px;
+    height: 13px;
+    margin-top: 7px;
+}
+.div_regist a
+{
+    color: #1dabb4;
+    text-decoration: none;
+}
+.div_regist a:Hover
+{
+    color: Green;
+    text-decoration: underline;
+}
+.txtBoxUserName
+{
+    width: 180px;
+    height: 15px;
+    float: left;
+    position: relative;
+    padding: 8px;
+    background-color: #F4F4F4;
+    border: 0px;
+}
+.txtBoxPassword
+{
+    float: left;
+    position: relative;
+    padding-top: 3px;
+    border: 0px;
+    background-color: #F4F4F4;
+}
+.tbwe_username
+{
+    float: left;
+    width: 150px;
+    height: 15px;
+    border: 0;
+    text-indent: 5px;
+    color: Gray;
+    background: url('Images/searchTextBox.png') no-repeat;
+}
+.tbwe_password
+{
+    float: left;
+    width: 100px;
+    height: 15px;
+    border: 0;
+    text-indent: 5px;
+    color: Gray;
+    background: url('Images/searchTextBox.png') no-repeat;
+}
+/*-------结束--------登录页样式—— ------------------*/
+
+body
+{
+    font-family: 宋体;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------母版页样式----------------------*/
+.dft_body
+{
+    background-color: #DBF8FE;
+    background-repeat: repeat-x;
+}
+.div_masterouter
+{
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 宋体;
+    font-size: 15px;
+    color: black;
+    background-color: #EBEBEB;
+}
+.div_banner
+{
+    width: 1024px;
+    height: 100px;
+    background: url('Images/bannerNew.png') no-repeat;
+}
+.div_mastertop
+{
+    width: 1024px;
+}
+.div_welcome
+{
+    width: 1014px;
+    height: 25px;
+    padding-top: 8px;
+    padding-left: 10px;
+    border-bottom: solid 1px #A0A09E;
+    background-color: #F3F3F3;
+    background: url('Images/master_banner.jpg') no-repeat;
+}
+.div_menu
+{
+    width: 166px;
+    height: auto;
+    min-height: 750px;
+    background-color: #EBEBEB;
+    float: left;
+}
+.div_center
+{
+    width: 858px;
+    height: auto;
+    min-height: 750px;
+    background-color: White;
+    float: left;
+}
+.HeadLoginStatus
+{
+    color: #1577AF;
+    text-decoration: none;
+}
+.pnlContent
+{
+    font-family: 宋体;
+    font-size: 15px;
+    height: auto;
+    min-height: 650px;
+    text-align: left;
+    margin-bottom: 25px;
+    width: 859px;
+}
+.div_masterBottom
+{
+    width: 1024px;
+    height: 31px;
+    background: url('Images/master_bottom2.jpg');
+}
+/*-----------结束-----母版页样式----------------------*/
+
+/*--------导航样式-------------*/
+.TreeViewBg
+{
+    background-image: url("Images/rootNode01.jpg" );
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.TreeViewBg_Selected
+{
+    background-image: url("Images/selectedRootnode01.jpg" );
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.TreeViewBg_Selected a
+{
+    color: Green;
+}
+.TreeViewBg a
+{
+    background: none;
+    text-decoration: none;
+}
+.TreeViewBg a:hover
+{
+    background: none;
+    text-decoration: none;
+}
+.no_style
+{
+    text-align: left;
+    text-indent: 5px;
+}
+/*-------结束-----导航样式-------------*/
+
+/*-------Label样式----------------*/
+.lblTitle
+{
+    width: auto;
+    color: #4592CB;
+    font-weight: bold;
+    margin-top: 7px;
+}
+/*----结束---Label样式----------------*/
+
+/*  DropDownList 样式
+--------------------------------------------------------------------------------*/
+.ddlCommon
+{
+    width: 140px;
+    text-align: left;
+    border: solid 1px #2975bf;
+    color: Black;
+    cursor: pointer;
+}
+
+/*--------LinkButton 样式------------*/
+.lnkBtnCommon
+{
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 10px;
+    color: #1475AD;
+}
+.LinkButtonStyle
+{
+    text-decoration: none;
+    color:Blue;
+    font-size: 14px;
+    padding: 2px 4px 4px 4px;
+    font-family: 宋体,方正姚体,华文宋体;
+}
+
+.LinkButtonStyle:hover
+{
+    text-decoration: underline;
+}
+
+.lnkBtnCommon:hover
+{
+    text-decoration: underline;
+}
+.lnkBtnBlue
+{
+    background-color: White;
+    font-size: 15px;
+    color: #3C8DBB;
+    padding-top: 3px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.lnkBtnInGv
+{
+    text-decoration: none;
+    color: #1577AF;
+    font-size: 13px;
+}
+.lnkBtnInGv:hover
+{
+    text-decoration: underline;
+}
+.lnkBtnExportDate
+{
+    padding-top: 4px;
+    padding-left: 8px;
+    font-size: 13px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #3566C1;
+    border: solid 1px #3186B7;
+}
+.hyplDownLoad
+{
+    padding-top: 4px;
+    padding-left: 8px;
+    font-size: 13px;
+    margin-left: 6px;
+    text-decoration: none;
+    color: #3566C1;
+    border: solid 1px #3186B7;
+}
+/*----结束----LinkButton 样式------------*/
+
+/*--------搜索Panel 样式------------*/
+.pnl_search
+{
+    margin: 5px 5px 5px 10px;
+}
+/*----结束----搜索Panel 样式------------*/
+
+/*-------------ToolBar 样式--------------*/
+.div_ToolBar
+{
+    font-size: 15px;
+    height: 22px;
+    width: 846px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 8px;
+    margin-left: -1px;
+    background: url('Images/toolbar_top.jpg') no-repeat;
+}
+.div_ToolBar a
+{
+    color: #1475AD;
+    text-decoration: none;
+}
+.div_ToolBar a:hover
+{
+    text-decoration: underline;
+}
+/*------结束-------ToolBar 样式--------------*/
+
+/*-----gridview表头固定样式-------------*/
+.Freezing
+{
+    /*--     position: relative;     border: solid 1px #45A6F5;     top: expression(this.offsetParent.scrollTop);     z-index: +2;---*/
+}
+.pnlgvFree
+{
+    margin-left: 10px;
+    position: relative;
+    z-index: 1;
+    top: 0px;
+    left: -1px;
+    overflow: auto;
+    width: 846px;
+}
+/*----结束---gridview表头固定样式-------------*/
+
+/*-------Paging 分页控件样式--------------*/
+.div_Paging1
+{
+    font-family: 宋体;
+    width: 845px;
+    color: #1475AD;
+    text-decoration: none;
+    border: 1px solid #45A6F5;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.div_Paging1 td
+{
+    border: 0px;
+}
+.div_Paging2
+{
+    font-family: 宋体;
+    width: 100%;
+    color: #1475AD;
+    text-decoration: none;
+    border: 1px solid #45A6F5;
+    margin-top: 5px;
+}
+.div_Paging2 td
+{
+    border: 0px;
+}
+/*----结束-----Paging 分页控件样式--------------*/
+
+/*-------GridView  样式------------*/
+.GridViewStyleOfSelectedRow
+{
+    background-color: #DDEBF4 !important;
+}
+.gvCommon
+{
+    text-align: left;
+    font-family: 宋体;
+    font-size: 15px;
+    text-indent: 8px;
+    margin-top: 5px;
+    border: solid 1px #45A6F5;
+    width: 100%;
+    margin-top: -1px;
+}
+.gvCommon th
+{
+    height: 25px;
+    font-size: 15px;
+    background-color: #C8E1FB;
+    color: #1577AF;
+    text-decoration: none;
+    font-weight: normal;
+    white-space: nowrap;
+    font-family: 黑体;
+    border: solid 1px #45A6F5;
+    text-align: center;
+    padding-right: 8px;
+}
+.gvCommon th a
+{
+    text-decoration: none;
+    color: #1577AF;
+}
+.gvCommon th a:hover
+{
+    text-decoration: underline;
+}
+.gvCommon td
+{
+    height: 30px; /* background-color: #FFFFFF;*/
+    color: #1475AD;
+    border: 1px solid #45A6F5;
+    white-space: nowrap;
+    text-align: center;
+    padding-right: 5px;
+}
+.gvCommon td a
+{
+    text-decoration: none;
+}
+.gvCommon td a:hover
+{
+    text-decoration: underline;
+}
+/*------结束------GridView  样式------------*/
+
+/*----------DetailsView 样式--------------*/
+.dvCommon
+{
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    border: solid 1px #45A6F5;
+}
+.dvCommon td
+{
+    font-size: 15px;
+    border: solid 1px #45A6F5;
+    padding-left: 10px;
+    font-weight: normal;
+}
+/*-----结束-----DetailsView 样式--------------*/
+
+/*----------FormView 样式--------------*/
+.fvCommon
+{
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    border: solid 1px #45A6F5;
+}
+.fvCommon td
+{
+    font-size: 15px;
+    border: solid 1px #45A6F5;
+    font-weight: normal;
+}
+/*-----结束-----FormView 样式--------------*/
+
+/*-------TextBox 样式-----------*/
+.txtBoxCommon
+{
+    width: 166px;
+    border: 1px solid #3186B7;
+    padding-top: 3px;
+    font-family: 宋体;
+    font-size: 14px; /*color: #2975bf;*/
+    color: Black;
+    background-color: White;
+}
+.txtBoxSearch
+{
+    border: solid 1px #3186B7;
+    padding-top: 3px;
+    font-family: 宋体;
+    font-size: 14px;
+    color: #2975bf;
+    background-color: White;
+}
+/*----结束---TextBox 样式-----------*/
+
+/*---------Button 样式--------------*/
+.btnOK
+{
+    background-color: White;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c2d8d7;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #1475AD;
+    padding-top: 2px;
+    height: 24px;
+    cursor: pointer;
+}
+.btnCommon
+{
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #68B9DE;
+    color: White;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+/*-----结束----Button 样式--------------*/
+
+/*-------Ajax 控件样式--ModalPopup-----------*/
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=60);
+    opacity: 0.7;
+}
+.pnlmodalPopup
+{
+    background-color: White;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px;
+    width: 620px;
+    min-height: 460px;
+    max-height: 460px;
+}
+/*---结束----Ajax 控件样式--ModalPopup-----------*/
