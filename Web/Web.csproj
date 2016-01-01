@@ -80,6 +80,7 @@
     <Content Include="App_Themes\Blue\Images\tvBtn1.jpg" />
     <Content Include="App_Themes\Blue\Images\up_green.png" />
     <Content Include="App_Themes\Blue\SCMSSite.css" />
+    <Content Include="Common\UserControl\LeftMenuSiteMap.ascx" />
     <Content Include="Login.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -137,6 +138,14 @@
     <Compile Include="Common\BasedUserControl.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Common\SYNCRoleName.cs" />
+    <Compile Include="Common\UserControl\LeftMenuSiteMap.ascx.cs">
+      <DependentUpon>LeftMenuSiteMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UserControl\LeftMenuSiteMap.ascx.designer.cs">
+      <DependentUpon>LeftMenuSiteMap.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -190,6 +199,9 @@
       <Project>{4BE59038-1469-489B-AF56-668E9DFC413D}</Project>
       <Name>Web.UI.WebControls</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sitemap\Administrator.sitemap" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
