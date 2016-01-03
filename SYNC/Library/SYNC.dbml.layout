@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SYNC">
+  <DataContextMoniker Name="/SYNCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="200b9117-244e-4143-8a2d-38f403b39908" absoluteBounds="3.75, 1.25, 2, 1.7625655110677081">
+      <DataClassMoniker Name="/SYNCDataContext/aspnet_Roles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14e773db-4aa0-4caa-b600-d6b52268c53f" absoluteBounds="3.765, 1.71, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3f9251e-b46a-4205-867c-88b90e2a169a" absoluteBounds="7.25, 2, 2, 2.1446048990885416">
+      <DataClassMoniker Name="/SYNCDataContext/aspnet_Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e940798c-ef59-4174-a56d-0d5bb8e9b445" absoluteBounds="7.265, 2.46, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="831c4e73-fe03-499b-829c-1546051f1c1b" absoluteBounds="4.625, 3.75, 2, 1.7625655110677081">
+      <DataClassMoniker Name="/SYNCDataContext/UserMappings" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3f49616-ef30-4d49-90a8-9490ecc7c673" absoluteBounds="4.64, 4.21, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f9652d9-789d-4d02-8c79-d062db55bdbe" absoluteBounds="6.125, 0.5, 2, 1.1895064290364583">
+      <DataClassMoniker Name="/SYNCDataContext/aspnet_UsersInRoles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22646e15-9e99-4e1c-94de-68c5353f8021" absoluteBounds="6.14, 0.96, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 1.46975321451823); (6.125 : 1.46975321451823)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SYNCDataContext/aspnet_Roles/aspnet_Roles_aspnet_UsersInRoles" />
+      <nodes>
+        <classShapeMoniker Id="200b9117-244e-4143-8a2d-38f403b39908" />
+        <classShapeMoniker Id="7f9652d9-789d-4d02-8c79-d062db55bdbe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.6875 : 2); (7.6875 : 1.68950642903646)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SYNCDataContext/aspnet_Users/aspnet_Users_aspnet_UsersInRoles" />
+      <nodes>
+        <classShapeMoniker Id="c3f9251e-b46a-4205-867c-88b90e2a169a" />
+        <classShapeMoniker Id="7f9652d9-789d-4d02-8c79-d062db55bdbe" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

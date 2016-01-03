@@ -1,0 +1,3301 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>eSchool.Web.UI.WebControls</name>
+    </assembly>
+    <members>
+        <member name="T:eSchool.Web.UI.WebControls.Empty">
+            <summary>
+            表示空白的控件，如用在 <typeparamref name="GridView"/> 的 EmptyTemplate 中。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Empty.Text">
+            <summary>
+            空白显示的文本。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.DataGridView">
+            <summary>
+            提供对 GridView 功能扩展的控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.DataGridView.SetColumnsOrder(System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            <summary>
+            设置数据列的顺序。
+            </summary>
+            <param name="orders">表示数据列名称和顺序号的字典。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.DataGridView.CreateColumns(System.Web.UI.WebControls.PagedDataSource,System.Boolean)">
+            <summary>
+            创建用来构建控件层次结构的列字段集。
+            </summary>
+            <param name="dataSource">数据源。</param>
+            <param name="useDataSource">指示是否使用数据源。</param>
+            <returns>列字段集。</returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Utility">
+            <summary>
+            提供基于WebControls的实用方法的类。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetCurrentLoginRole">
+            <summary>
+            获得当前登录角色名。
+            </summary>
+            <returns>如果存在当前登录的角色，则返回角色名，否则返回null。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetCurrentLoginUser">
+            <summary>
+            获得当前登录的用户名，该用户名不带域前缀。
+            </summary>
+            <returns>不带域前缀的用户名。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.ConvertToUnicodeStr(System.String)">
+            <summary>
+            将输入的字符串以“$”分割成按照Unicode编码的串。
+            </summary>
+            <param name="input">输入的字符串。</param>
+            <returns>以“$”分割成按照Unicode编码的串。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.ConvertFromUnicodeStr(System.String)">
+            <summary>
+            将以“$”分割成按照Unicode编码的串转换为原始字符串。
+            </summary>
+            <param name="input">以“$”分割成按照Unicode编码的串。</param>
+            <returns>原始字符串。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.ConvertCollectionToString(System.Collections.ICollection,System.String)">
+            <summary>
+            将一个集合按照指定的分割符串行化为一个字符串。
+            </summary>
+            <param name="collection">需要串行化的集合。</param>
+            <param name="seperator">分割符。</param>
+            <returns>串行化为一个字符串。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.ConvertToGridViewRowSelectMode(eSchool.Web.UI.WebControls.RowSelectMode)">
+            <summary>
+            将行选择模式枚举转换成 GridView 行选择模式枚举。
+            </summary>
+            <param name="rowSelectMode">行选择枚举。</param>
+            <returns>转换之后的 GridView 行选择模式枚举。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.PopupErrorBox(System.Object,System.String)">
+            <summary>
+            将错误消息显示在弹出对话框内。
+            </summary>
+            <param name="invokeObject">引发错误的对象</param>
+            <param name="errorMessage">错误消息</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.FindControlInNamingContainer(System.Web.UI.Control,System.String)">
+            <summary>
+            在一个控件的命名容器中寻找指定ID的一个控件。
+            </summary>
+            <param name="ctrl">需要在其命名容器中查找指定ID控件的控件。</param>
+            <param name="ctrlId">待寻找控件的ID。</param>
+            <returns>找到的指定ID的控件，如果没有找到则返回null。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.FindControl(System.Web.UI.Control,System.String)">
+            <summary>
+            给定一个控件，在期所在页面以及命名容器中寻找指定ID的控件。
+            </summary>
+            <param name="ctrl">给定的一个控件对象。</param>
+            <param name="ctrlId">需要寻找的控件ID</param>
+            <returns>如果找到返回该控件对象实例，否则返回null。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetControlPropertyValue``1(System.Web.UI.Control,System.String,``0)">
+            <summary>
+            在一个控件中寻找一个属性的值，并在控件或属性不存在的情况下指定一个默认值。
+            </summary>
+            <typeparam name="T">控件属性的类型。</typeparam>
+            <param name="ctrl">控件。</param>
+            <param name="propertyName">属性名称。</param>
+            <param name="defaultValue">在控件或属性不存在的情况下指定一个默认值。</param>
+            <returns>如果找到则返回属性值，否则返回指定的默认值。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.SetControlPropertyValue``1(System.Web.UI.Control,System.String,``0)">
+            <summary>
+            为一个控件的属性赋值，如果控件或属性不存在则不执行任何操作。
+            </summary>
+            <typeparam name="T">控件属性的类型。</typeparam>
+            <param name="ctrl">控件。</param>
+            <param name="propertyName">属性名称。</param>
+            <param name="value">需要赋值的属性值。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetViewStatePropertyValue``1(System.Web.UI.StateBag,System.String,``0)">
+            <summary>
+            为某个控件的属性从视图状态中获取属性值。
+            </summary>
+            <typeparam name="T">属性的类型</typeparam>
+            <param name="viewState">控件的视图状态</param>
+            <param name="propertyName">属性名称</param>
+            <param name="defaultValue">默认值</param>
+            <returns>获得的属性值，如果视图状态中没有保存该属性值则返回默认值。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.SetViewStatePropertyValue``1(System.Web.UI.StateBag,System.String,``0)">
+            <summary>
+            为某个控件的属性将其属性值保存到视图状态中。
+            </summary>
+            <typeparam name="T">属性的类型</typeparam>
+            <param name="viewState">控件的视图状态</param>
+            <param name="propertyName">属性名称</param>
+            <param name="propertyValue">属性值</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.RenderUnUIControlDesign(System.Web.UI.Control,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            提供无界面的控件设计时呈现。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetRequestParameterValue(System.Web.UI.Page,System.String)">
+            <summary>
+            获得当前页面请求传递的参数值。
+            </summary>
+            <param name="thePage">当前页面</param>
+            <param name="paramName">参数名</param>
+            <returns>参数值，如果不存在指定的参数名，则返回null。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetMaxValue``1(``0[],``0)">
+            <summary>
+            从一组数据中找出最大数。
+            </summary>
+            <typeparam name="T">类型参数</typeparam>
+            <param name="array">待查找的数组</param>
+            <param name="defaultMax">默认的最大数</param>
+            <returns>最大数</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetMinValue``1(``0[],``0)">
+            <summary>
+            从一组数据中找出最小数。
+            </summary>
+            <typeparam name="T">类型参数</typeparam>
+            <param name="array">待查找的数组</param>
+            <param name="defaultMin">默认的最小数</param>
+            <returns>最小数</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.ExportToExcel(System.Web.UI.WebControls.GridView,System.Int32[],System.String,System.String)">
+            <summary>
+            将GridView数据导出到Excel表格中。
+            </summary>
+            <param name="gvCtrl">要导出数据的GridView控件。</param>
+            <param name="needToHideColumnIndexes">需要隐藏的GridView的列索引数组</param>
+            <param name="exportTitle">导出标题</param>
+            <param name="fileName">导出文件名</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetUrlString(System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            获得带参数列表的Url。
+            </summary>
+            <param name="url">原请求页地址。</param>
+            <param name="requestParams">请求参数列表。</param>
+            <returns>获得带参数列表的Url</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Utility.GetControlName(System.Web.UI.Control)">
+            <summary>
+            获得控件的名称。控件名称来自于控件ID，但是不包括命名前缀。
+            </summary>
+            <param name="ctrl">控件</param>
+            <returns></returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMappingCollection">
+            <summary>
+            配置属性映射的集合类，用于 Filtering 控件的 PropertyMappings 属性。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMappingSettings">
+            <summary>
+            配置属性映射设置类。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.PropertyMappingSettings.RefPropertyName">
+            <summary>
+            属性名引用，用于查找属性映射。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.PropertyMappingSettings.RefPropertyValue">
+            <summary>
+            属性值引用，用于提供代码。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.PropertyMappingSettings.RefPropertyMeaning">
+            <summary>
+            属性含义引用，用于提供友好文本。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMapping">
+            <summary>
+            属性映射。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMappingCollectionEditor">
+            <summary>
+            属性映射编辑器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMappingConverter">
+            <summary>
+            属性映射类型转换器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMappingSettingConverter">
+            <summary>
+            属性设置转换器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PropertyMappingControlBuilder">
+            <summary>
+            控件构造器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CommandName">
+            <summary>
+            和多数据控件提供许多内置功能，这些功能使用户可以对控件中的项进行更新、删除、插入和分页。
+            这些数据控件绑定到数据源控件时，可以利用该数据源控件的功能并提供自动更新、删除、插入和分页功能。
+            这些数据控件如：FormView、DetailView、GridView。
+            该枚举列示了目前支持的命令名称。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.Cancel">
+            <summary>
+            在更新或插入操作中用于取消操作和放弃用户输入的值。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.Delete">
+            <summary>
+            在删除操作中用于从数据源中删除显示的记录。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.Edit">
+            <summary>
+            在更新操作中用于使数据控件处于编辑模式。在 EditItemTemplate 属性中指定的内容是为数据行显示的。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.Insert">
+            <summary>
+            在插入操作中用于尝试使用用户提供的值在数据源中插入新记录。引发 ItemInserting 和 ItemInserted 事件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.New">
+            <summary>
+            在插入操作中用于使数据控件处于插入模式。在 InsertItemTemplate 属性中指定的内容是为数据行显示的。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.Page">
+            <summary>
+            在分页操作中用于表示页导航行中执行分页的按钮。若要指定分页操作，请将该按钮的 CommandArgument 属性设置为“Next”、“Prev”、“First”、“Last”或要导航至的目标页的索引。引发 PageIndexChanging 和 PageIndexChanged 事件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommandName.Update">
+            <summary>
+            在更新操作中用于尝试使用用户提供的值更新数据源中所显示的记录。引发 ItemUpdating 和 ItemUpdated 事件。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.SetEnableStateControlCollection">
+            <summary>
+            设置使能状态的控件及控制属性集合。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddItemNewControl(System.String)">
+            <summary>
+            增加添加项目的控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddItemDeleteControl(System.String)">
+            <summary>
+            增加删除项目的控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddItemEditControl(System.String)">
+            <summary>
+            增加编辑项目的控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddSetUsedFlagControl(System.String)">
+            <summary>
+            增加启用/停用项目的控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddExportControl(System.String)">
+            <summary>
+            增加导出项目的控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddToolBarControl(System.String)">
+            <summary>
+            增加工具栏控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddAttachingControl(System.String)">
+            <summary>
+            增加添加附件控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddAuditingControl(System.String)">
+            <summary>
+            增加审核控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddReturnControl(System.String)">
+            <summary>
+            增加返回控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddSeekControl(System.String)">
+            <summary>
+            增加查询控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddSearchControl(System.String)">
+            <summary>
+            增加搜索控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControlCollection.AddPrintControl(System.String)">
+            <summary>
+            增加打印控件。
+            </summary>
+            <param name="ctrlId">控件ID</param>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.SetEnableStateControl">
+            <summary>
+            设置使能状态的控件及控制属性。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetEnableStateControl.#ctor(System.String,System.String)">
+            <summary>
+            按照给定的控件和控制属性构造对象。
+            </summary>
+            <param name="ctrlId">给定的控件</param>
+            <param name="propertyName">控制属性</param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetEnableStateControl.ControlID">
+            <summary>
+            需要设置使能状态的控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetEnableStateControl.PropertyName">
+            <summary>
+            控制使能状态的属性。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.BaseUserControl">
+            <summary>
+            提供用户控件的基类。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.GetViewStatePropertyValue``1(System.String,``0)">
+            <summary>
+            从当前用户控件的视图状态中获得属性值。
+            </summary>
+            <typeparam name="T">属性的类型。</typeparam>
+            <param name="propertyName">属性名称。</param>
+            <param name="defaultValue">属性默认值。</param>
+            <returns>如果存在属性值则返回该值，否则返回默认值。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.SetViewStatePropertyValue``1(System.String,``0)">
+            <summary>
+            将指定的属性值放入当前用户控件的视图状态中。
+            </summary>
+            <typeparam name="T">属性的类型。</typeparam>
+            <param name="propertyName">属性名称。</param>
+            <param name="value">属性值。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ExportItems(System.Web.UI.WebControls.GridView,System.Int32[])">
+            <summary>
+            将项目导出。        
+            </summary>
+            <param name="gv">需要导出的 GridView 控件。</param>
+            <param name="needToHideColumnIndexes">需要在导出的时候隐藏的列索引数组。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ChangeViewMode(System.Web.UI.WebControls.FormView)">
+            <summary>
+            改变当前的页面展现模式。
+            </summary>
+            <param name="formView">FormView控件。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ChangeViewMode(System.Web.UI.WebControls.DetailsView)">
+            <summary>
+            改变当前的页面展现模式。
+            </summary>
+            <param name="detailView">DetailView控件。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseItemCommand(eSchool.Web.UI.WebControls.CommandName)">
+            <summary>
+            按照提供的数据项执行命令进行页面跳转。一般在数据控件的“ItemCommand”事件中调用该方法，并且该方法提供一种默认跳转机制，派生类可以根据具体需要重写该方法以实现自己的跳转过程。
+            </summary>
+            <param name="cmdName">数据项执行的命令。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseReturn">
+            <summary>
+            返回请求。
+            按照以下顺序优先执行返回：
+            （1）如果地址栏内有<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.ReturnUrlRequestParameterName"/>属性指定的参数，则按此参数的地址返回；
+            （2）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfReturn"/>属性，则按此属性值的地址返回；
+            （3）如果上述情况不存在，则按请求页地址返回。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseNewForm">
+            <summary>
+            新建项目页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfItemNew"/>属性，则按此属性值的地址跳转；
+            （2）如果上述情况不存在，则按请求页地址跳转。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseEditForm">
+            <summary>
+            编辑项目页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfItemEdit"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“SomeEditPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseDispForm">
+            <summary>
+            显示项目页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfItemDisp"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“SomeDispPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseSetUsedFlagForm">
+            <summary>
+            启用/停用页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfSetUsedFlag"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“SetUsedFlagPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseDetail">
+            <summary>
+            详情页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfDetail"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“DetailPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseSeek">
+            <summary>
+            查询页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfSeek"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“SeekPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseSearch">
+            <summary>
+            搜索页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfSearch"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“SearchPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseAttaching">
+            <summary>
+            添加附件页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfAttaching"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“AttachingPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseAuditing">
+            <summary>
+            审核页请求。
+            按照以下顺序优先执行返回：
+            （1）如果设置了<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfAuditing"/>属性，则按此属性值的地址跳转；
+            在跳转的时候会将<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName"/>属性和<see cref="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue"/>属性作为依据，即在地址栏内形成如同“AuditPage.aspx?ID=1”的请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.ResponseRedirect(System.String,System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            请求页。
+            </summary>
+            <param name="url">原请求页地址。</param>
+            <param name="requestParams">请求参数列表。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.SendData(eSchool.Web.UI.WebControls.BaseUserControl,System.Object)">
+            <summary>
+            向其他的用户控件发送数据。
+            </summary>
+            <param name="reciever">接受数据的用户控件。</param>
+            <param name="data">发送的数据。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.SendData(System.String,System.String,System.Object)">
+            <summary>
+            在不同页面之间传递数据进行通信。
+            </summary>
+            <param name="url">跳转页面的Url。</param>
+            <param name="recieverId">接受方对象的ID。</param>
+            <param name="data">需要发送的数据对象。</param>
+            <remarks>该方法将自动跳转页面，并且将传递的数据放入会话中，同时 CommunicationMode 被标识为 Session，并在跳转后的页面的 PreLoad 事件中调用 RecieveData 方法接受数据。接受对象需要重写 ReceiveData ，以接受并处理数据。</remarks>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.RecieveData(System.Object)">
+            <summary>
+            接受其他用户发送的数据，并且处理数据。这需要派生类去重写该方法实现具体的处理。
+            </summary>
+            <param name="data">接受的数据。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.BaseUserControl.SetControlEnableState">
+            <summary>
+            主要提供给派生用户控件重写，按照 SetEnableStateControls 中指定的控件使能设置集合，设置控件的使能状态。
+            该方法会被页面的 PreRender 事件方法调用。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableItemNew">
+            <summary>
+            能否新建项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableItemDelete">
+            <summary>
+            能否删除项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableItemEdit">
+            <summary>
+            能否修改项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableItemDisp">
+            <summary>
+            能否显示项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableItemDetail">
+            <summary>
+            能否显示项目详情。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableReturn">
+            <summary>
+            能否执行返回。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableSeek">
+            <summary>
+            能否执行查询项目详情。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableSearch">
+            <summary>
+            能否执行搜索项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnablePrint">
+            <summary>
+            能否执行打印。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableSetUsedFlag">
+            <summary>
+            能否启用/停用项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableExport">
+            <summary>
+            能否导出项目。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableAttaching">
+            <summary>
+            能否添加附件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableAuditing">
+            <summary>
+            能否执行审核。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.EnableToolBar">
+            <summary>
+            能否执行工具栏。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.ViewMode">
+            <summary>
+            页面展现的视图模式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.RowSelectMode">
+            <summary>
+            以数据表方式展现时行选择模式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfItemNew">
+            <summary>
+            新建项目的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfItemEdit">
+            <summary>
+            修改项目的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfItemDisp">
+            <summary>
+            显示项目的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfSetUsedFlag">
+            <summary>
+            启用/停用项目的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfAttaching">
+            <summary>
+            添加附件的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfAuditing">
+            <summary>
+            执行审核的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfDetail">
+            <summary>
+            查看详情的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfSeek">
+            <summary>
+            查询页面的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfSearch">
+            <summary>
+            搜索页面的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfPrint">
+            <summary>
+            打印页面的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.UrlOfReturn">
+            <summary>
+            返回的链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.ReturnUrlRequestParameterName">
+            <summary>
+            接收返回链接的地址栏请求参数名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyIDRequestParameterName">
+            <summary>
+            表示主码ID的地址栏请求参数名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.ExportTitle">
+            <summary>
+            导出项目的标题。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.ExportFile">
+            <summary>
+            导出项目的保存的文件名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.KeyValue">
+            <summary>
+            保存主码键值。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.CommunicationObject">
+            <summary>
+            用于控件之间通信时交换的数据对象，其中 Key 用于标识通信数据的名称，以区分出不同的通信数据内容，Value 则是具体的通信数据对象。
+            该属性主要用于 SendData 发送数据对象，RecieveData 接收数据对象，并做相关的处理。该属性只能用于传递一个通信数据对象，并且会放入 CommunicationObjects 通信数据对象集合的第一个元素。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.CommunicationObjects">
+            <summary>
+            用于控件之间通信时交换的数据对象，并且是一组对象集合，每个对象为一个 KeyValuePair 的键值对。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.CommunicationMode">
+            <summary>
+            获得数据通信的方式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.BaseUserControl.SetEnableStateControls">
+            <summary>
+            获得需要设置使能状态的控件集合，可以通过向该集合中添加需要进行使能控制的控件，由基础用户控件来控制这些控件的使能状态。
+            </summary>
+            <summary>
+            属性映射集合。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlStateSettingCollection">
+            <summary>
+            配置控件状态的集合类。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlState">
+            <summary>
+            控件状态，一般是控件中 bool 类型的属性。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ControlState.Enabled">
+            <summary>
+            使能状态。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ControlState.Visible">
+            <summary>
+            可见状态。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlStateForTrueCriteria">
+            <summary>
+            控件状态为真的条件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ControlStateForTrueCriteria.OnlyOneRowSelected">
+            <summary>
+            当表格中只有一行被选中。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ControlStateForTrueCriteria.AtLeastOneRowSelected">
+            <summary>
+            当表格中至少有一行被选中。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ControlStateForTrueCriteria.HasPermission">
+            <summary>
+            当有访问权限。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlStateSetting">
+            <summary>
+            控件状态设置项。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ControlStateSetting.ControlID">
+            <summary>
+            需要控制状态的控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ControlStateSetting.ControlState">
+            <summary>
+            需要控制的控件状态。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ControlStateSetting.ControlStateForTrueCriteria">
+            <summary>
+            控件状态为真的条件。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlStateSettingCollectionEditor">
+            <summary>
+            控件状态集合编辑器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlStateSettingBuilder">
+            <summary>
+            控件状态构造器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ControlStateSettingConverter">
+            <summary>
+            控件状态转换器。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ListControlInitItemType">
+            <summary>
+            列表控件初始项类型。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ListControlInitItemType.None">
+            <summary>
+            没有任何初始项。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ListControlInitItemType.All">
+            <summary>
+            显示所有项。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ListControlInitItemType.Select">
+            <summary>
+            显示选择项。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ProduceSiteMapProviderManner">
+            <summary>
+            合成 SiteMapProvider 的方式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ProduceSiteMapProviderManner.None">
+            <summary>
+            不进行任何合成。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ProduceSiteMapProviderManner.PrefixAddSiteMapProviderANDPrefixAddRole">
+            <summary>
+            SiteMapProvider前缀 + SiteMapProvider + Role前缀 + Role。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ProduceSiteMapProviderManner.SiteMapProviderANDPrefixAddRole">
+            <summary>
+            SiteMapProvider + Role前缀 + Role。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ProduceSiteMapProviderManner.PrefixAddSiteMapProviderANDRole">
+            <summary>
+            SiteMapProvider前缀 + SiteMapProvider + Role。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ProduceSiteMapProviderManner.SiteMapProviderANDRole">
+            <summary>
+            SiteMapProvider + Role。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Tab">
+            <summary>
+            标签控件，主要用在页面之间切换。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.SelectedTabItemStyle">
+            <summary>
+            选中标签项的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.TabItemStyle">
+            <summary>
+            标签项的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.TabStyle">
+            <summary>
+            标签的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.SiteMapProvider">
+            <summary>
+            标签项的数据源提供者。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.SiteMapProviderPrefix">
+            <summary>
+            标签项的数据源提供者名称前缀，ProduceSiteMapProviderManner 不为 None 时，将按照这个名称前缀合成 SiteMapProvider。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.RolePrefix">
+            <summary>
+            角色名前缀，当 ProduceSiteMapProviderManner 不为 None 时，将按照这个名称前缀合成 SiteMapProvider。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Tab.ProduceSiteMapProviderManner">
+            <summary>
+            SiteMapProvider合成方式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.UsedFlag">
+            <summary>
+            启用/停用标记。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UsedFlag.BeingUsed">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UsedFlag.Stopped">
+            <summary>
+            停用。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.SetUsedFlag">
+            <summary>
+            提供设置启用/停用的控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetUsedFlag.OnCommand(System.Web.UI.WebControls.CommandEventArgs)">
+            <summary>
+            执行命令后激发的事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.SetUsedFlag.GetSetUsedFlag">
+            <summary>
+            获得当前设置的启用/停用标志。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:eSchool.Web.UI.WebControls.SetUsedFlag.Command">
+            <summary>
+            执行命令后激发的事件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetUsedFlag.SetUsedFlagControlID">
+            <summary>
+            开启与关闭设置启用/停用控件的外部控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetUsedFlag.UsedFlag">
+            <summary>
+            获取和设置启用/停用标志。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetUsedFlag.RepeatDirection">
+            <summary>
+            重复布局的方向。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetUsedFlag.ConfirmCommandName">
+            <summary>
+            确定命令的名称。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.SetUsedFlag.CancelCommandName">
+            <summary>
+            取消命令的名称。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ViewMode">
+            <summary>
+            为用户提供的页面视图模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ViewMode.AllItems">
+            <summary>
+            提供列表的模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ViewMode.DispForm">
+            <summary>
+            提供只读表单的模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ViewMode.NewForm">
+            <summary>
+            提供插入表单的模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ViewMode.EditForm">
+            <summary>
+            提供编辑表单的模式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CommunicationMode">
+            <summary>
+            数据通信的方式。该枚举主要用于 SendData 和 RecieveData。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommunicationMode.None">
+            <summary>
+            不存在通信。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommunicationMode.QueryString">
+            <summary>
+            地址栏参数方式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommunicationMode.Session">
+            <summary>
+            会话方式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PageEffective">
+            <summary>
+            页请求有效性。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.PageEffective.Always">
+            <summary>
+            始终有效。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.PageEffective.Initial">
+            <summary>
+            初始页请求。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.PageEffective.PostBack">
+            <summary>
+            回发页请求。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CommunicationObjectCollection">
+            <summary>
+            用于控件之间进行通信，传递的数据对象集合。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.CommunicationObjectCollection.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+            <summary>
+            添加一批数据对象。
+            </summary>
+            <param name="commObjs">数据对象集合。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.CommunicationObjectCollection.Add(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            添加一个数据对象到集合中。
+            </summary>
+            <param name="keyValue">数据对象。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.CommunicationObjectCollection.FindByKey(System.String)">
+            <summary>
+            通过通信数据的名称键值查找通信数据对象。
+            </summary>
+            <param name="key">通信数据的名称键值。</param>
+            <returns>如果存在指定名称键值的通信数据对象则返回该数据对象，否则返回空值。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.CommunicationObjectCollection.ToArray">
+            <summary>
+            将通信数据复制到新数组中。
+            </summary>
+            <returns>包含通信数据的数组。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.CommunicationObjectCollection.GetCommunicationObjectList(System.String,System.Type)">
+            <summary>
+            获得某个通信对象的列表数据。如果某个通信对象为一组数据，那么将会被表示成以“,”分割的字符串，通过该方法可以将其还原为列表形式的一组数据。
+            </summary>
+            <param name="keyName">通信对象的键名。</param>
+            <param name="type">通信对象的类型。</param>
+            <returns>如果通信对象是以“,”分割的字符串，则返回还原后的数据列表，否则返回一个空的列表。</returns>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.CommunicationObjectCollection.Item(System.String)">
+            <summary>
+            通过通信数据的名称键值查找通信数据对象。
+            </summary>
+            <param name="key">通信数据的名称键值。</param>
+            <returns>如果存在指定名称键值的通信数据对象则返回该数据对象，否则返回空值。</returns>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.CommunicationObjectCollection.Item(System.String,System.Int32)">
+            <summary>
+            如果通信数据对象是一组数据，并被表示成“,”分割的字符串，通过通信数据的名称键值查找并转换第一个通信数据对象。
+            </summary>
+            <param name="key">通信数据的名称键值。</param>
+            <param name="index">指示返回指定索引号的通信数据对象。</param>
+            <returns>如果存在该通信数据对象，并且被表示成“,”分割的字符串，则返回该数据通信对象的第一个，否则返回空值。</returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CommunicationDirection">
+            <summary>
+            数据通信的方向。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommunicationDirection.Send">
+            <summary>
+            发送方向。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommunicationDirection.Receive">
+            <summary>
+            接收方向。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CommunicationDirection.Bidirect">
+            <summary>
+            双向，既接收数据又发送数据。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.BaseSavedPageFeature">
+            <summary>
+            页为返回后需要恢复状态保留下来的特征枚举。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.BaseSavedPageFeature.PageIndex">
+            <summary>
+            当前分页索引。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.BaseSavedPageFeature.PageSize">
+            <summary>
+            当前每页行数。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.BaseSavedPageFeature.Sort">
+            <summary>
+            排序表达式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.BaseSavedPageFeature.SortDir">
+            <summary>
+            排序方向。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.BaseSavedPageFeature.Filter">
+            <summary>
+            筛选表达式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.EnableMode">
+            <summary>
+            使能模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.EnableMode.Visible">
+            <summary>
+            按照可见性使能。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.EnableMode.Enabled">
+            <summary>
+            按照使能性使能。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.RowSelectMode">
+            <summary>
+            行选择模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.RowSelectMode.None">
+            <summary>
+            没有做任何行选择模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.RowSelectMode.Single">
+            <summary>
+            单行选择。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.RowSelectMode.Multiple">
+            <summary>
+            多行选择。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CheckPoint">
+            <summary>
+            权限检查点。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckPoint.UserControlLoad">
+            <summary>
+            用户控件加载的时候。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckPoint.ExecuteControlCommand">
+            <summary>
+            执行控件命令的时候。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckPoint.ControlRender">
+            <summary>
+            控件呈现的时候。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CheckFailureMode">
+            <summary>
+            权限检查失败的时候所采取的处理模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckFailureMode.None">
+            <summary>
+            系统不采取任何处理。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckFailureMode.ThrowException">
+            <summary>
+            系统抛出安全异常。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckFailureMode.HideControl">
+            <summary>
+            系统自动隐藏控件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.CheckFailureMode.DisableControl">
+            <summary>
+            系统自动使控件不可用。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.CheckPermissionRule">
+            <summary>
+            权限检查规则。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.CheckPermissionRule.#ctor(eSchool.Web.UI.WebControls.CheckPoint,eSchool.Web.UI.WebControls.CheckFailureMode,System.Object)">
+            <summary>
+            构造方法。
+            </summary>
+            <param name="checkPoint">检查点。</param>
+            <param name="mode">检查失败处理模式。</param>
+            <param name="checkObj">检查对象。</param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.CheckPermissionRule.CheckObject">
+            <summary>
+            获取检查对象。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.CheckPermissionRule.CheckPoint">
+            <summary>
+            获取检查点。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.CheckPermissionRule.CheckFailureMode">
+            <summary>
+            获取与设置检查失败所采取的处理模式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.DataKeyCollection">
+            <summary>
+            表示数据键值集合。该集合实际上为一张二维表，集合中的每个元素对象相当于一条记录，其类型为 DataKey。
+            如果要访问一条记录中的某个字段，通过二维数组的方式可以获得。
+            如：dataKeys[0][1]表示第一条记录的第二个字段的数据，或者 dataKeys[0]["Name"]，其中“Name”为字段名。
+            该类主要用于定义 ConfigedUserControl 的 DataKeys 属性。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.DataKeyCollection.Add(System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            以若干键值对作为一条记录添加到数据键值集合中。
+            </summary>
+            <param name="dataKey">若干键值对。键表示字段名，值表示该字段的值。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.DataKeyCollection.Add(System.String,System.Object)">
+            <summary>
+            将指定的键值添加到数据键值集合中。如果集合中存在多条记录，则添加的键值将作为一系列的同样的数据形成为二维表的一个新列。
+            </summary>
+            <param name="key">键名。即字段名。</param>
+            <param name="data">键值。即字段值。</param>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ConfigedUserControl">
+            <summary>
+            提供 Web 用户控件的基础类。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ConfigedUserControl.PageConfigControlAccessRoleAppSettingName">
+            <summary>
+            页面配置控件访问角色的应用设置名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.ConfigedUserControl._selectParameters">
+            <summary>
+            记录检索数据的参数集合。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestorePagingFeatures(System.Web.UI.WebControls.GridView)">
+            <summary>
+            恢复被保存的控件分页的页特征。该方法在控件的 DataBinding 事件中调用。
+            </summary>
+            <param name="ctrl">控件。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreSortingFeatures(System.Web.UI.WebControls.GridView)">
+            <summary>
+            恢复排序页特征。该方法建议在 Page_PreRender 事件中调用。
+            </summary>
+            <param name="ctrl">具有排序的控件。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreFilteringFeatures(System.Web.UI.WebControls.ObjectDataSource,System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs)">
+            <summary>
+            将被保存的筛选条件页特征恢复到数据源控件。该方法在数据源控件的 Selecting 调用。
+            </summary>
+            <param name="ds">数据源控件。</param>
+            <param name="e">数据源查询参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreFilteringFeatures(System.Web.UI.WebControls.SqlDataSource,System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs)">
+            <summary>
+            将被保存的筛选条件页特征恢复到数据源控件。该方法在数据源控件的 Selecting 调用。
+            </summary>
+            <param name="ds">数据源控件。</param>
+            <param name="e">数据源查询参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreFilteringFeatures(System.Web.UI.WebControls.LinqDataSource,System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)">
+            <summary>
+            将被保存的筛选条件页特征恢复到数据源控件。该方法在数据源控件的 Selecting 调用。
+            </summary>
+            <param name="ds">数据源控件。</param>
+            <param name="e">数据源查询参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.ExportToExcel(System.String,System.String)">
+            <summary>
+            将数据控件的数据导出到Excel。
+            </summary>
+            <param name="exportTitle">导出标题。</param>
+            <param name="fileName">导出文件名。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.GetViewStatePropertyValue``1(System.String,``0)">
+            <summary>
+            获得作为存放在视图状态中的属性值。
+            </summary>
+            <typeparam name="T">属性的类型。</typeparam>
+            <param name="propertyName">属性名称。</param>
+            <param name="defaultValue">属性的默认值。</param>
+            <returns></returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.SetViewStatePropertyValue``1(System.String,``0)">
+            <summary>
+            设置存放在视图状态中的属性值。
+            </summary>
+            <typeparam name="T">属性的类型。</typeparam>
+            <param name="propertyName">属性名称。</param>
+            <param name="value">属性值。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.CheckCommandPermission(System.String)">
+            <summary>
+            检测命令执行权限。该方法需要派生类重写。
+            </summary>
+            <param name="functionName">功能名称。</param>
+            <returns>如果检测到的执行权限为Allow，则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.SetRowSelectMode(eSchool.Web.UI.WebControls.RowSelectMode)">
+            <summary>
+            设置行选择模式。该方法需要由派生类重写。
+            </summary>
+            <param name="rowSelectMode">行选择模式。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.ReceiveData">
+            <summary>
+            接收通信数据。
+            </summary>
+            <remarks>
+            该方法可以被派生类覆写，在覆写的方法中最好在第一句话中调用基类方法以获得通信的数据集合，该数据集合存放在 CommunicationObjects 属性中。
+            </remarks>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.SendData(eSchool.Web.UI.WebControls.ConfigedUserControl,eSchool.Web.UI.WebControls.CommunicationObjectCollection)">
+            <summary>
+            向在同一页面中的其他用户控件发送通信数据。
+            </summary>
+            <param name="destUserCtrl">目标用户控件，即接受方用户控件。</param>
+            <param name="commObjs">发送用于通信的数据。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RedirectReturn(eSchool.Web.UI.WebControls.UserControlConfig.Url)">
+            <summary>
+            执行返回页请求。
+            </summary>
+            <param name="aUrl">需要返回的Url。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RedirectReturn">
+            <summary>
+            执行返回页请求。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RedirectCompleted(eSchool.Web.UI.WebControls.UserControlConfig.Url)">
+            <summary>
+            执行完成跳转。
+            </summary>
+            <param name="aUrl">跳转的Url。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RedirectCompleted">
+            <summary>
+            执行完成跳转。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.Redirect(eSchool.Web.UI.WebControls.UserControlConfig.Url)">
+            <summary>
+            按照配置文件中配置的 Url 进行页面跳转。
+            </summary>
+            <param name="aUrl"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.LoadSavedPageFeatures">
+            <summary>
+            加载被保存的页特性。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.AddExposedControls(System.Collections.Generic.List{System.Web.UI.Control})">
+            <summary>
+            将需要暴露的控件添加到集合中。
+            </summary>
+            <param name="exposedCtrls">需要暴露的控件集合。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.AddPageConfigControl">
+            <summary>
+            为用户控件添加页面配置控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.GetSavedPageFeatures(System.String)">
+            <summary>
+            通过给定的被保存的页特性名称，获得特性字符串。
+            </summary>
+            <param name="featureName">页特性名称。</param>
+            <returns>特性字符串。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.OnInit(System.EventArgs)">
+            <summary>
+            已经被覆写。用户控件在初始化的时候执行的操作。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.Page_PreLoad(System.Object,System.EventArgs)">
+            <summary>
+            主要执行改变视图模式、接收数据、加载被保存页特性、添加将被暴露控件到集合中等操作。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.OnPreRender(System.EventArgs)">
+            <summary>
+            已经被覆写。恢复排序页特征，设置数据列状态。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreCommObjectsForSelectParamaters(System.Web.UI.WebControls.LinqDataSource,System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)">
+            <summary>
+            将数据通信对象存入数据源查询参数中。该方法在数据源控件的 Selecting 事件中被调用。
+            </summary>
+            <param name="e">数据源查询事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreSelectParameterFeatures(System.Web.UI.WebControls.LinqDataSource,System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)">
+            <summary>
+            将被保存的页特征恢复到数据源控件的查询参数。该方法在数据源控件的 Selecting 事件中被调用。
+            </summary>
+            <param name="ds">数据源控件。</param>
+            <param name="e">数据源查询事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.DataSourceControl_Selecting(System.Object,System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)">
+            <summary>
+            被覆写。数据源控件的 Selecting 事件。
+            </summary>
+            <param name="sender">数据源控件。</param>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreCommObjectsForSelectParamaters(System.Web.UI.WebControls.SqlDataSource,System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs)">
+            <summary>
+            将数据通信对象存入数据源查询参数中。该方法在数据源控件的 Selecting 事件中被调用。
+            </summary>
+            <param name="e">数据源查询事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreSelectParameterFeatures(System.Web.UI.WebControls.SqlDataSource,System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs)">
+            <summary>
+            将被保存的页特征恢复到数据源控件的查询参数。该方法在数据源控件的 Selecting 事件中被调用。
+            </summary>
+            <param name="ds">数据源控件。</param>
+            <param name="e">数据源查询事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.DataSourceControl_Selecting(System.Object,System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs)">
+            <summary>
+            被覆写。数据源控件的 Selecting 事件。
+            </summary>
+            <param name="sender">数据源控件。</param>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreCommObjectsForSelectParamaters(System.Web.UI.WebControls.ObjectDataSource,System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs)">
+            <summary>
+            将数据通信对象存入数据源查询参数中。该方法在数据源控件的 Selecting 事件中被调用。
+            </summary>
+            <param name="e">数据源查询事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.RestoreSelectParameterFeatures(System.Web.UI.WebControls.ObjectDataSource,System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs)">
+            <summary>
+            将被保存的页特征恢复到数据源控件的查询参数。该方法在数据源控件的 Selecting 事件中被调用。
+            </summary>
+            <param name="ds">数据源控件。</param>
+            <param name="e">数据源查询事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.DataSourceControl_Selecting(System.Object,System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs)">
+            <summary>
+            被覆写。数据源控件的 Selecting 事件。
+            </summary>
+            <param name="sender">数据源控件。</param>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.Control_Load(System.Object,System.EventArgs)">
+            <summary>
+            该方法被配置文件中 Controls 节中的控件自动订阅。主要用于将控件添加到被暴露的集合中。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.Control_Command(System.Object,System.Web.UI.WebControls.CommandEventArgs)">
+            <summary>
+            该方法被配置文件中 Controls 节中的控件自动订阅。主要用于控件执行命令。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.Control_PreRender(System.Object,System.EventArgs)">
+            <summary>
+            该方法被配置文件中 Controls 节中的控件自动订阅。主要用于控件属性设置。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.ConfigedUserControl.Control_DataBinding(System.Object,System.EventArgs)">
+            <summary>
+            该方法被配置文件中 Controls 节中的控件自动订阅。主要用于控件在执行数据绑定前执行的动作。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.ConfigFile">
+            <summary>
+            获取与设置配置文件名。通过设置该属性，Web 用户控件获取配置文件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.PageConfigFile">
+            <summary>
+            获取与设置页面配置文件。通过该设置属性，Web 用户寻找页面配置文件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.LoginRole">
+            <summary>
+            获得当前登录的角色。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.LoginUser">
+            <summary>
+            获得当前登录的用户名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.IsIgnoreSavedPageFeatures">
+            <summary>
+            获取与设置一个指示忽略保存的页特性的标志。如果该标志被设置成真，则基础用户控件将不再按照加载的页特性进行恢复操作。默认情况下为 false。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.IsDefaultRedirect">
+            <summary>
+            获取与设置是否执行默认的返回处理。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.Config">
+            <summary>
+            获得用户控件的配置信息，该信息从<see cref="P:eSchool.Web.UI.WebControls.ConfigedUserControl.ConfigFile"/>属性指定的配置文件中获得。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.CommunicationObjects">
+            <summary>
+            获得用于用户控件之间通信的数据集合。无论是通过 Session 方式还是 QueryString 方式都通过该集合属性获得通信的数据。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.DataKeys">
+            <summary>
+            表示数据关键字段。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.ExposedControls">
+            <summary>
+            表示命令型控件集合。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.DataControl">
+            <summary>
+            数据控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.DataSourceControl">
+            <summary>
+            数据源控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.DataColumns">
+            <summary>
+            数据项。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.SavedPageFeatures">
+            <summary>
+            被页面作为返回后需要保留的特征数据存储。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigedUserControl.PageConfigControlAccessRole">
+            <summary>
+            获取页面配置控件访问角色。来自 Web.config 中的 appSetings 的 PageConfigControlAccessRole 配置节。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Filtering">
+            <summary>
+            筛选控件。
+            </summary>
+            <remarks>
+            筛选控件要能够正常执行需要进行以下的配置工作：
+            （1）第一种情况：筛选过程的执行由 DataSet 的 FilterExpression 引擎完成。
+                a)  配置 ObjectDataSource / SqlDataSource，与普通配置过程一样；
+                b)  配置 GridView，与普通配置过程一样；
+                c)  如果数据源为 SqlDataSource，则 GridView 需要为每个 Column 配置“AccessibleHeaderText”属性，
+                    例如：“AccessibleHeaderText”配置为“StudentNo,N”，表示该 Column 提供的筛选表达式的类型为数字型，具体参见第二种情况。
+            （2）第二种情况：筛选过程的执行由后台 SQL 引擎完成。
+                a)  配置 ObjectDataSource，启用 EnablePaging，并正确配置“SelectCountMethod”，“StartRowIndexParameterName”，“MaximumRowsParameterName”三个属性；
+                b)  配置 GridView，启用 Paging，并为每个 Column 正确配置“AccessibleHeaderText”，“HeaderText”两个属性，
+                    其中“AccessibleHeaderText”为筛选项，“HeaderText”为筛选项在筛选控件中筛选项列表中显示的友好文本，
+                    对于“AccessibleHeaderText”由两部分构成，筛选项表达式和表达式类型，
+                    表达式类型指“S”，“N”，“D”三种，分别代表筛选项表达式为“文本型”，“数字型”，“日期时间型”，其中“S”可以省略，
+                    例如：“Student.Name,S”，
+                    一般筛选项表达式为 SQL 字段表达式，当 SQL 的 From 子句包含多张表，字段前一定要加上表名前缀；
+                c)  配置 Filtering，设置属性“FilterParameterName”为数据源控件配置的 SelectMethod 中的可以接受的筛选表达式参数，
+                    例如：SelectMethod 的原型 “public DSStudent.StudentDataTable GetStudents(string filterExp, string sortExp, int? startRowIndex, int? maximumRows)”，
+                    其中的“filterExp”为“FilterParameterName”，但是该参数是否参与执行筛选过程，则是由 SelectMethod 的作者决定的。
+            （3）第三种情况：筛选过程的执行由 Linq 完成。
+                a)  配置 LinqDataSource，与普通配置过程一样；
+                b)  配置 GridView，启用 Paging，并为每个 Column 正确配置“AccessibleHeaderText”，“HeaderText”两个属性，
+                    其中“AccessibleHeaderText”为筛选项，“HeaderText”为筛选项在筛选控件中筛选项列表中显示的友好文本，
+                    对于“AccessibleHeaderText”由两部分构成，筛选项表达式和表达式类型，
+                    表达式类型指“S”，“N”，“D”三种，分别代表筛选项表达式为“文本型”，“数字型”，“日期时间型”，其中“S”可以省略，
+                    例如：“Student.Name{0}{1},S”，“Students.Count(Name{0}{1}) > 0”
+                    一般筛选项表达式为 Linq where 子句支持的普通语言表达式，但是需要为筛选值给定两个占位符，第一个表示筛选比较运算符，第二个表示筛选值。
+            （4）配置属性映射。
+                属性映射是指在数据源中有一些字段是用一些代码表示，如：AuditFlag 字段用“0”和“1”代表“拒绝”与“通过”，
+                但是用户在输入筛选条件的筛选值的时候并不知道上述代码表示，而是直接输入具有友好内容的文本，如：“拒绝”与“通过”，
+                此时，筛选控件提供在友好文本和代码之间进行对应转换处理，即根据用户输入的友好文本，将其对应到代码上，如：“0”和“1”。
+                属性映射的配置：
+                a)  配置 PropertyMappingDataSourceID 属性，指定一个为属性映射转换的数据源控件ID；
+                b)  配置 PropertyMappings 集合属性，指定需要执行属性映射转换的字段，通过指定每个属性映射的“PropertyName”和“FilterItem”属性将转换对应起来，
+                    “PropertyName”是指在属性映射数据源中属性的名称，如：“AuditFlag”，
+                    “FilterItem”是指在筛选项列表中需要进行属性映射转换的筛选项，如果筛选执行引擎为后台 SQL 则设置为 AccessibleHeaderText 中的筛选表达式，
+                    但不包括筛选表达式类型，如：“AccessibleHeaderText”为“Audit.AuditFlag,N”，则“FilterItem”应设置成“Audit.AuditFlag”；
+                c)  配置 PropertyMappingSetting 复合属性，指定在属性映射数据源中用来查找相关属性映射内容的字段名称，
+                    “RefPropertyName”指定属性映射数据源中属性映射名，
+                    “RefPropertyValue”指定属性映射数据源中属性映射值，
+                    “RefPropertyMeaning”指定属性映射数据源中属性对应含义的友好文本。
+            </remarks>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._dv">
+            <summary>
+            李志鹏增 (获取动态的数据源)
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._filterCtrl">
+            <summary>
+            需要筛选数据的控件，目前只支持 GridView。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._dsCtrl">
+            <summary>
+            作为筛选数据来源的数据源控件，目前只支持 ObjectDataSource。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._propertyMappingDsCtrl">
+            <summary>
+            表示层次结构数据的数据源控件，这是用来执行属性映射筛选的。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._propertyMappingResult">
+            <summary>
+            获得的属性映射结果。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._filterItems">
+            <summary>
+            筛选项的集合，每个筛选项是一个 ListItem 对象，
+            其中 ListItem.Text 属性记录显示在筛选项列表中的友好文本，一般是配置在 GridView 的每个 Column 的 HeaderText 中的文本，
+            而其 ListItem.Value 属性记录则记录了筛选项的构造文本，
+                （1）如果数据源控件启用了分页 SQL 处理，则该属性是配置在 GridView 的每个 Column 的 AccessibleHeaderText 中的文本，
+                     并且由两部分构成：表示筛选项的表达式文本，表达式计算结果类型，分为“S”、“N”、“D” 三种。
+                     "S"表示结果为文本类型，可以省略；
+                     "N"表示结果为数字类型；
+                     "D"表示结果为日期类型。
+                     Sample: 
+                        ListItem("姓名", "Student.Name,S")，“姓名”将作为友好文本显示在筛选项列表中，“”则作为筛选项的真正构造文本。
+                （2）如果数据源控件没有启用分页 SQL 处理，则筛选过程发生在 DataSet 中。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._displayOrHideCtrl">
+            <summary>
+            设置筛选控件显示/隐藏的外部控件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering._doQueryingCtrl">
+            <summary>
+            执行查询的外部控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SetDisplayOrHideControlState">
+            <summary>
+            设置显示/隐藏外部控件的状态，主要是交替更换控件显示文本。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.LinqDataSource_Selecting(System.Object,System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)">
+            <summary>
+            计算并设置筛选表达式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SqlDataSource_Selecting(System.Object,System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs)">
+            <summary>
+            计算并设置筛选表达式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ObjectDataSource_Selected(System.Object,System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs)">
+            <summary>
+            计算并设置筛选表达式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ObjectDataSource_Selecting(System.Object,System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs)">
+            <summary>
+            计算并设置筛选表达式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ConstructCriteriaTable">
+            <summary>
+            构造筛选条件表格。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ConstructCriteriaTableHeader">
+            <summary>
+            构建筛选条件表格的表头。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Filtering.iCriteriaNo">
+            <summary>
+            记录在当前页请求周期中从条件编号列表中恢复过来的编号对应的列表下标。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ConstructBlankCriteriaTableRow">
+            <summary>
+            构造空白的筛选条件行。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ConstructCommandControl">
+            <summary>
+            构造命令控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ConstructFilterColumns">
+            <summary>
+            构造筛选列控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.ResetCrieriaTableRow">
+            <summary>
+            重置筛选条件行。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.AddCriteriaTableRow">
+            <summary>
+            添加筛选条件行。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InsertCriteriaTableRow">
+            <summary>
+            插入筛选条件行。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.DeleteCriteriaTableRow">
+            <summary>
+            删除筛选条件行。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SetFilterColumnState">
+            <summary>
+            设置筛选列相关控件状态。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.DoFilterColumns">
+            <summary>
+            执行筛选列。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.DoFilter">
+            <summary>
+            执行筛选。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.CalFilterString">
+            <summary>
+            计算筛选表达式。
+            计算步骤：
+            （1）通过遍历筛选条件表格中的每一行，得到“筛选项”，“比较运算符”，“筛选值”，“筛选逻辑”。
+            （2）然后将上述得到的四项串接成一条合法的筛选表达式，例如：“Student.Name LIKE '%张%' AND”。
+            （3）接着将遍历到的所有串接的筛选表达式全部串接成最终的合法筛选表达式。
+                  例如：“Student.Name LIKE '%张%' AND Student.Gender = '男'”。
+            需要注意：
+            最终表达式是否合法，需要依赖执行筛选表达式的引擎程序和对 GridView 这样需要控制筛选过程的外部控件的配置情况。
+            例如：执行筛选表达式的引擎程序包括“DataSet的FilterExpression”和“SQL”。
+            例如：GridView 的 Column 的 HeaderText，AccessibleHeaderText 等属性配置是否正确。
+            </summary>
+            <returns>计算得到的筛选表达式。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.GetPropertyFilterValue(System.String,System.String)">
+            <summary>
+            为指定的筛选项（字段）转换属性映射对应的属性值。
+            </summary>
+            <param name="fieldName">指定的筛选项（字段）</param>
+            <param name="filterValue">待转换属性映射的源值，一般是用户通过筛选控件输入的友好文本</param>
+            <returns>得到转换后的属性映射对应的属性值，如果没有转换成功，则返回原始值。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SetCriteriaTableState">
+            <summary>
+            设置筛选条件表格状态。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SetCriteriaNoListProperty">
+            <summary>
+            设置记录筛选条件编号列表属性。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.OnInit(System.EventArgs)">
+            <summary>
+            重载Page_Init事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitControl">
+            <summary>
+            初始化该控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitLableText">
+            <summary>
+            设置Label的值
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitDataView">
+            <summary>
+            李志鹏增
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.FillDataIntoFilterControl">
+            <summary>
+            李志鹏增(填充查询项中的DropDownList)
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitDataSourceControl">
+            <summary>
+            初始化执行筛选的数据源外部控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitFilterObjectControl">
+            <summary>
+            初始化需要控制筛选的外部控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitDoQueryingControl">
+            <summary>
+            初始化执行查询的外部控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitDisplayOrHideConstrol">
+            <summary>
+            初始化显示/隐藏外部控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitPropertyMappingDataSourceControl">
+            <summary>
+            初始化获得属性映射的数据源外部控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.InitFilterItems">
+            <summary>
+            初始化筛选项。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SaveControlState">
+            <summary>
+            在页声明周期结束时保存下控件的状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.LoadControlState(System.Object)">
+            <summary>
+            在页生命周期的开始加载之前(即Page_Load之前)进行控件状态的恢复
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.SaveViewState">
+            <summary>
+             在页声明周期结束时保存下视图的状态(在SaveControlState之后)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.LoadViewState(System.Object)">
+            <summary>
+            在页生命周期的开始加载之前(即Page_Load之前)进行控件状态的恢复(在LoadControlState之后)
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Filtering.TrackViewState">
+            <summary>
+            在页面加载之前进行视图的跟踪
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.LableBasicUserID">
+            <summary>
+            接受参数值_BID的控件ID
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.LabelUserEntityID">
+            <summary>
+            接受参数_UEID的控件ID
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.ControlID">
+            <summary>
+            用于执行筛选的控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DataSourceID">
+            <summary>
+            用于筛选数据来源的数据源控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.PropertyMappingDataSourceID">
+            <summary>
+            用于获得属性映射的数据源控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DisplayOrHideControlID">
+            <summary>
+            显示和隐藏排序控件的外部控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DoQueryingControlID">
+            <summary>
+            执行查询的外部控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DoQueryingControlText">
+            <summary>
+            执行查询的外部控件显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.IsHidingDoQueryingControl">
+            <summary>
+            当出现筛选控件的时候是否隐藏执行查询的外部控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.FilterCommandText">
+            <summary>
+            筛选命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.ResetCommandText">
+            <summary>
+            重置命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.AddCriteriaCommandText">
+            <summary>
+            添加条件命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.InsertCriteriaCommandText">
+            <summary>
+            插入条件命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DeleteCriteriaCommandText">
+            <summary>
+            删除条件命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DisplayFilterColumnsCommandText">
+            <summary>
+            显示筛选列命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.FilterColumnsCommandText">
+            <summary>
+            设置筛选列命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.CancelFilterColumnsCommandText">
+            <summary>
+            取消筛选列命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.DisplayCommandText">
+            <summary>
+            显示/隐藏命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.HideCommandText">
+            <summary>
+            显示/隐藏命令的隐藏文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.ShowHeader">
+            <summary>
+            是否显示筛选表格表头。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.BlankFilterItemText">
+            <summary>
+            空白筛选项的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.BlankFilterItemValue">
+            <summary>
+            空白筛选项的查询文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.EnableFilterColumns">
+            <summary>
+            设置能否筛选列。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.FilterParameterName">
+            <summary>
+            执行筛选的方法参数名，一般是数据源控件中配置的Select方法的参数名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.CommandStyle">
+            <summary>
+            命令样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.CriteriaTableStyle">
+            <summary>
+            筛选条件表格的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.FilterColumnsStyle">
+            <summary>
+            筛选列控件的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.ResetCriteriaWithHiding">
+            <summary>
+            在隐藏筛选控件的同时是否重置筛选条件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.InitSelectData">
+            <summary>
+            是否在初始的时候检索数据。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.PropertyMappings">
+            <summary>
+            属性映射集合。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.PropertyMappingSettings">
+            <summary>
+            属性映射设置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Filtering.CriteriaNoList">
+            <summary>
+            为每一个筛选条件设置一个唯一的编号，以便在回发请求的时候重构筛选条件。
+            </summary>
+        </member>
+        <member name="E:eSchool.Web.UI.WebControls.Filtering.Command">
+            <summary>
+            当执行筛选的时候发生该事件。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants">
+            <summary>
+            表示常量集合。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.RequestParameter">
+            <summary>
+            与页面请求参数相关的常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.RequestParameter.EventTarget">
+            <summary>
+            表示从页面回发的请求目标，一般为某个能够引发回发请求控件的ID。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.RequestParameter.EventArgument">
+            <summary>
+            表示从页面回发的请求参数，一般为某个能够引发回发请求控件指定的参数值，
+            具体指控件的客户端事件函数 __doPostBack 的第二个参数。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.DataSourceType">
+            <summary>
+            数据源类型。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.DataSourceType.ADONet">
+            <summary>
+            以 ADO.Net 作为数据源。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.DataSourceType.SQL">
+            <summary>
+            以 SQL 作为数据源。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.DataSourceType.Linq">
+            <summary>
+            以 Linq 作为数据源。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.Comparer">
+            <summary>
+            表示比较关系运算的常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.Equal">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.NotEqual">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.GreatThan">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.GreatEqualThan">
+            <summary>
+            大于等于
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.LessThan">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.LessEqualThan">
+            <summary>
+            小于等于
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.Include">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.NotInclude">
+            <summary>
+            不包含
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.IsNull">
+            <summary>
+            为空
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Comparer.IsNotNull">
+            <summary>
+            不为空
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Constants.Comparer.GetText(System.String)">
+            <summary>
+            根据指定的比较运算符号得到一个友好的文本。
+            </summary>
+            <param name="comparer">比较运算符号</param>
+            <returns>与比较运算符号对应的友好文本。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Constants.Comparer.GetText(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            根据指定的比较运算符号得到一个友好的文本。
+            </summary>
+            <param name="comparer">比较运算符号</param>
+            <param name="culture">指定的区域性</param>
+            <returns>与比较运算符号对应的友好文本。</returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.Logic">
+            <summary>
+            表示逻辑运算的常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Logic.And">
+            <summary>
+            逻辑与
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Logic.Or">
+            <summary>
+            逻辑或
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Logic.CSharpAnd">
+            <summary>
+            代表CSharp语言中的逻辑与
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Logic.CSharpOr">
+            <summary>
+            代表CSharp语言中的逻辑或
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Constants.Logic.GetText(System.String)">
+            <summary>
+            获得与逻辑运算符号对应的一个友好文本。
+            </summary>
+            <param name="logic">逻辑运算符号</param>
+            <returns>与指定的逻辑运算符号对应的友好文本。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Constants.Logic.GetText(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            获得与逻辑运算符号对应的一个友好文本。
+            </summary>
+            <param name="logic">逻辑运算符号</param>
+            <param name="culture">指定的区域性</param>
+            <returns>与指定的逻辑运算符号对应的友好文本。</returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.FieldType">
+            <summary>
+            字段类型。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.FieldType.Text">
+            <summary>
+            文本类型。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.FieldType.Numeric">
+            <summary>
+            数字类型。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.FieldType.DateTime">
+            <summary>
+            日期时间类型。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Constants.FieldType.GetFieldType(System.Type)">
+            <summary>
+            将类型转换成字段类型符号串。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Constants.FieldType.Validate(System.String,System.String)">
+            <summary>
+            验证字段值是否符合字段类型格式，如果不符合则返回一个无效的默认值。
+            </summary>
+            <param name="fieldValue"></param>
+            <param name="fieldType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.Paging">
+            <summary>
+            与分页相关的常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Paging.PageSizePopertyName">
+            <summary>
+            分页大小属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Paging.PageIndexPropertyName">
+            <summary>
+            当前页索引属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Paging.PageCountPropertyName">
+            <summary>
+            分页数属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Paging.PagerSettingsPropertyName">
+            <summary>
+            分页设置属性名。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.ControlProperties">
+            <summary>
+            与控件属性相关的常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.ControlProperties.CheckedPropertyName">
+            <summary>
+            Checked 的属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.ControlProperties.SelectedPropertyName">
+            <summary>
+            Selected 的属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.ControlProperties.TextPropertyName">
+            <summary>
+            Text 的属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.ControlProperties.AutoPostBackPropertyName">
+            <summary>
+            AutoPostBack 的属性名。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.StringInfo">
+            <summary>
+            字符串常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.StringInfo.Space">
+            <summary>
+            空格常量。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Constants.Literals">
+            <summary>
+            文字常量。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Constants.Literals.ExportTips">
+            <summary>
+            在导出数据时候的文字提示。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Waiting">
+            <summary>
+            等待控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Waiting.Text">
+            <summary>
+            设置等待文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Waiting.ImageUrl">
+            <summary>
+            设置等待图片。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PagingRenderMode">
+            <summary>
+            分页控件呈现模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.PagingRenderMode.LinkButton">
+            <summary>
+            按照LinkButton方式呈现。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.PagingRenderMode.ImageButton">
+            <summary>
+            按照ImageButton方式呈现。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PageSizeChangedEventArgs">
+            <summary>
+            分页大小改变之后发生的事件参数。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.PageSizeChangedEventArgs.SourcePageSize">
+            <summary>
+            原分页大小。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.PageSizeChangedEventArgs.CurrentPageSize">
+            <summary>
+            当前分页大小。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.PageSizeChangedEventHandler">
+            <summary>
+            分页大小改变之后发生的事件委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Paging">
+            <summary>
+            对包含分页功能的控件进行分页处理的控件。
+            </summary>
+            <remarks>
+            分页控件可以放在 GridView 的 PagerTemplate 中也可以放在 GridView 之外。
+            分页控件支持两种分页方式：
+            （1）由数据源控件支持的分页，如：SqlDataSource、LinqDataSource 自带的分页功能；
+            （2）由数据源支持的分页，如：构造了分页存储过程，并绑定在 SqlDataSource 上。
+            注意：如果由数据源支持的分页，需要提供给数据源 PageIndex 和 PageSize 两个传入参数，并且要
+            获得一个 PageCount 传出参数。对于分页控件来说需要通过 PageIndexParameterName 和
+            PageCountParameterName 两个属性来配置 PageIndex 和 PageCount 两个参数名，但是 PageSize 
+            则不用配置，这个可以由 GridView 这样的数据绑定控件获得。
+            注意：如果由数据源支持的分页，需要将分页控件放置在像 GridView 这样的数据绑定控件的 PagerTemplate 之外。
+            </remarks>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Paging.OnPageSizeChanged(eSchool.Web.UI.WebControls.PageSizeChangedEventArgs)">
+            <summary>
+            当页大小变化之后。
+            </summary>
+            <param name="e">页大小变化参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Paging.OnPageIndexChanged(System.EventArgs)">
+            <summary>
+            当页索引变化之后。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Paging.OnInit(System.EventArgs)">
+            <summary>
+            重写OnInit方法，以响应控件的Init事件，并将当前控件注册为需要页面保存其控件状态的页面控件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Paging.SaveControlState">
+            <summary>
+            保存控件状态。
+            </summary>
+            <returns>需要保存的控件状态对象。</returns>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Paging.LoadControlState(System.Object)">
+            <summary>
+            在回发请求的时候去重新装载控件状态。
+            </summary>
+            <param name="savedState">需要状态的控件状态。</param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.ControlID">
+            <summary>
+            控制分页的控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.DataSourcePaging">
+            <summary>
+            指示数据源是否支持分页查询。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageIndex">
+            <summary>
+            如果数据源支持分页查询，获得与设置当前页索引。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageCount">
+            <summary>
+            如果数据源支持分页查询，获得分页页数。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageIndexParameterName">
+            <summary>
+            如果数据源支持分页查询，传递给数据源的页索引参数名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageCountParameterName">
+            <summary>
+            如果数据源支持分页查询，传递得到页数的参数名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.IsVisibleWithNoData">
+            <summary>
+            当呈现数据的控件没有任何呈现的数据时，该分页控件是否可见。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PagingRenderMode">
+            <summary>
+            指明以“LinkButton”或“ImageButton”方式呈现导航内容。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageSizes">
+            <summary>
+            分页大小设置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.FirstPageText">
+            <summary>
+            导航到第一页的文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PreviousPageText">
+            <summary>
+            导航到上一页的文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.NextPageText">
+            <summary>
+            导航到下一页的文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.LastPageText">
+            <summary>
+            导航到最后一页的文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.GoToPageText">
+            <summary>
+            跳转导航的文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.FirstPageImageUrl">
+            <summary>
+            导航到第一页的图片链接地址。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PreviousPageImageUrl">
+            <summary>
+            导航到上一页的图片链接地址。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.NextPageImageUrl">
+            <summary>
+            导航到下一页的图片链接地址。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.LastPageImageUrl">
+            <summary>
+            导航到最后一页的图片链接地址。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.GoToPageImageUrl">
+            <summary>
+            跳转导航的图片链接地址。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.GoToPageBeforeText">
+            <summary>
+            跳转导航前置文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.GoToPageAfterText">
+            <summary>
+            跳转导航后置文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageIndexPageCountSeperator">
+            <summary>
+            页索引与页数之间的分隔符。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageSizeBeforeText">
+            <summary>
+            每页条数前置文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageSizeAfterText">
+            <summary>
+            每页条数后置文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.NavigateControlStyle">
+            <summary>
+            导航控件的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.GoToPageControlStyle">
+            <summary>
+            跳转控件的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.PageSizeControlStyle">
+            <summary>
+            页大小控件的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.LeftPaddingWidth">
+            <summary>
+            左侧空白宽度。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Paging.RightPaddingWidth">
+            <summary>
+            右侧空白宽度。
+            </summary>
+        </member>
+        <member name="E:eSchool.Web.UI.WebControls.Paging.PageSizeChanged">
+            <summary>
+            页大小变化之后激发。
+            </summary>
+        </member>
+        <member name="E:eSchool.Web.UI.WebControls.Paging.PageIndexChanged">
+            <summary>
+            页索引变化之后激发。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.MailLink">
+            <summary>
+            用于构造邮件地址的控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.MailLink.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写方法。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.MailLink.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写方法。
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.MailLink.Text">
+            <summary>
+            邮件地址的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.MailLink.EMail">
+            <summary>
+            邮件地址，以“mailto:”开始。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.MailLink.TagKey">
+            <summary>
+            重写属性。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Attaching._displayOrHideCtrl">
+            <summary>
+            执行开关附件控件的外部控件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Attaching._fileUpload">
+            <summary>
+            获取上载附件的控件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Attaching._btnUpload">
+            <summary>
+            执行上载的控件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Attaching._tblUploadedFiles">
+            <summary>
+            显示已上载附件的列表控件。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.Attaching._dsCtrl">
+            <summary>
+            获取控件附件上载到数据源中的外部控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Attaching.DisplayOrHideControlID">
+            <summary>
+            显示/隐藏附件控件的外部控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Attaching.DisplayCommandText">
+            <summary>
+            显示/隐藏附件控件的外部控件的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Attaching.HideCommandText">
+            <summary>
+            显示/隐藏附件控件的外部控件的隐藏文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Attaching.UploadCommandText">
+            <summary>
+            执行上载命令的控件文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Attaching.Parameters">
+            <summary>
+            参数集合。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Attaching.DataSourceID">
+            <summary>
+            获取控件附件上载到数据源中的外部控件ID。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.GridViewRowSelectMode">
+            <summary>
+            GridView行选择模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.GridViewRowSelectMode.None">
+            <summary>
+            不存在的行选择。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.GridViewRowSelectMode.Single">
+            <summary>
+            单选模式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.GridViewRowSelectMode.Multiple">
+            <summary>
+            多选模式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs">
+            <summary>
+            GridView行选择索引改变之后引发的事件参数。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs.#ctor(System.Web.UI.WebControls.GridView,System.Web.UI.WebControls.GridViewRow,System.Web.UI.Control,System.Boolean,System.Web.UI.WebControls.DataKey)">
+            <summary>
+            GridView 行选择变化后引发的事件参数。
+            </summary>
+            <param name="gv">GridView 对象。</param>
+            <param name="gvRow">引发事件的行对象。</param>
+            <param name="ctrl">引发行选择的控件。</param>
+            <param name="selected">行选中状态。</param>
+            <param name="dataKey">行数据键。</param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs.Row">
+            <summary>
+            获取引发事件的 GridViewRow 对象，如果是全选则为 null，如果是多选则为最后一个引发事件的行。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs.Control">
+            <summary>
+            获取引发事件的控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs.Selected">
+            <summary>
+            获取一个值，判断引发事件的选中状态。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs.DataKey">
+            <summary>
+            获取一个值，代表当前行的数据键值对象，如果是全选则为 null，如果是多选则为最后一个引发事件的行的数据键值对象。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventHandler">
+            <summary>
+            GridView行选择索引改变之后引发的事件委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.GridViewExtender">
+            <summary>
+            GridView扩展控件，主要用于控制行选择，工具栏命令的可选与否的控制等。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.SetControlState">
+            <summary>
+            设置控件的最终状态。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.SetNonRowSelectedPostBackState">
+            <summary>
+            设置当 IsRowSelectedControlPostBack 为 false 时候的行选择控件的状态。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.SetSelectAllRowControlState">
+            <summary>
+            设置当 IsRowSelectedControlPostBack 为 true 选择所有行的控件的状态。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.SetControlStateSettingsState">
+            <summary>
+            设置当 IsRowSelectedControlPostBack 为 true 需要控制的外部控件状态设置。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.DoSelectSingleRow">
+            <summary>
+            执行单行选择控件的回发事件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.DoSelectAllRows">
+            <summary>
+            执行多行选择控件的回发事件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.DoGridViewRowSelectedIndexChanged">
+            <summary>
+            执行行选择变化的事件，该执行方法只在 IsRowSelectControlPostBack 为 true 的时候执行。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.GridViewExtender.OnGridViewRowSelectedIndexChanged(eSchool.Web.UI.WebControls.GridViewRowSelectedIndexChangedEventArgs)">
+            <summary>
+            GridView行选择索引改变之后发生。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.ControlID">
+            <summary>
+            需要控制的GridViewID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.RowSelectMode">
+            <summary>
+            GridView行选择模式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.SelectSingleRowControlID">
+            <summary>
+            行选择控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.SelectAllRowsControlID">
+            <summary>
+            选择所有行的控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.OrderNoControlID">
+            <summary>
+            显示表格序号的控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.IsRowSelectedControlPostBack">
+            <summary>
+            行选择控件是否执行回发操作。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.ControlStateSettings">
+            <summary>
+            控件状态设置集合。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.SelectedRowStyle">
+            <summary>
+            筛选条件表格的样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.SelectedRows">
+            <summary>
+            获得选中的行。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.GridViewExtender.SelectedDataKeys">
+            <summary>
+            获得选中的行的数据键值集合。
+            </summary>
+        </member>
+        <member name="E:eSchool.Web.UI.WebControls.GridViewExtender.GridViewRowSelectedIndexChanged">
+            <summary>
+            GridView行选择索引改变之后发生。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.SortingSetSortingFieldsRenderMode">
+            <summary>
+            设定排序字段的呈现方式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.SortingSetSortingFieldsRenderMode.ListBox">
+            <summary>
+            按照ListBox呈现。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.SortingSetSortingFieldsRenderMode.RadioButtonList">
+            <summary>
+            按照RadioButtonList呈现。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.SortingCommandRenderMode">
+            <summary>
+            命令呈现方式。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.SortingCommandRenderMode.Button">
+            <summary>
+            按照Button呈现。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.SortingCommandRenderMode.ImageButton">
+            <summary>
+            按照ImageButton呈现。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Sorting">
+            <summary>
+            设置排序。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.ConctrolID">
+            <summary>
+            需要设置排序的控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.DisplayOrHideControlID">
+            <summary>
+            显示和隐藏排序控件的外部控件ID。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.HideWithBeingSorted">
+            <summary>
+            在执行排序之后是否隐藏控件。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.SetSortingFieldsRenderMode">
+            <summary>
+            设定排序字段呈现方式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.BlankSortItemText">
+            <summary>
+            空白排序项的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.BlankSortItemValue">
+            <summary>
+            空白排序项的查询文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.CommandRenderMode">
+            <summary>
+            命令呈现方式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.AddCommandText">
+            <summary>
+            将排序字段添加到排序列表中命令文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.UpCommandText">
+            <summary>
+            在排序列表中向上重排命令文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.DownCommandText">
+            <summary>
+            在排序列表中向下重排命令文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.DeleteCommandText">
+            <summary>
+            在排序列表中删除排序项命令文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.ClearCommandText">
+            <summary>
+            在排序列表中清除排序项命令文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.OkCommandText">
+            <summary>
+            确定排序列表中排序项命令文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.DisplayCommandText">
+            <summary>
+            显示/隐藏命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.HideCommandText">
+            <summary>
+            显示/隐藏命令的显示文本。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.AddCommandImageUrl">
+            <summary>
+            将排序字段添加到排序列表中图片链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.UpCommandImageUrl">
+            <summary>
+            在排序列表中向上重排图片链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.DownCommandImageUrl">
+            <summary>
+            在排序列表中向下重排图片链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.DeleteCommandImageUrl">
+            <summary>
+            在排序列表中删除排序项命令图片链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.ClearCommandImageUrl">
+            <summary>
+            在排序列表中清除排序项命令图片链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.OkCommandImageUrl">
+            <summary>
+            确定排序列表中排序项命令图片链接。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.CommandStyle">
+            <summary>
+            命令样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.SetSortingFieldsStyle">
+            <summary>
+            设定排序字段样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.SortingFieldsStyle">
+            <summary>
+            排序字段样式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Sorting.SortDirectionStyle">
+            <summary>
+            排序方向样式。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.ConfigNode">
+            <summary>
+            配置节点。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigNode.Config">
+            <summary>
+            节点的配置对象。一般指有具体对应对象的顶级配置节点。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigNode.Name">
+            <summary>
+            节点名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.ConfigNode.OwnerDocumentOuterXml">
+            <summary>
+            获得节点所属 XML 文档的所有文本。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.UserControlConfig">
+            <summary>
+            用户控件的页面配置的解析类，并且代表了一个用户控件的配置根节点。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.ViewModeAttributeName">
+            <summary>
+            视图模式的配置属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.CommunicationDirectionAttributeName">
+            <summary>
+            数据通信方向的配置属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.ReturnUrlAttributeName">
+            <summary>
+            返回地址的配置属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.CompletedUrlAttributeName">
+            <summary>
+            完成地址的配置属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.IsInitSelectDataAttributeName">
+            <summary>
+            是否初始检索数据的配置属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.RowSelectModeAttributeName">
+            <summary>
+            行选择模式的配置属性名。
+            </summary>
+        </member>
+        <member name="F:eSchool.Web.UI.WebControls.UserControlConfig.FunctionNameAttributeName">
+            <summary>
+            功能名称的配置属性名。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.UserControlConfig.Save">
+            <summary>
+            保存对配置的修改到配置文件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.UserControlConfig.#ctor(System.String,System.String)">
+            <summary>
+            构造方法。
+            </summary>
+            <param name="xmlConfigFileName">配置文件。</param>
+            <param name="name">节点名。</param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.ConfigFile">
+            <summary>
+            获取配置文件名。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.XmlNode">
+            <summary>
+            获取配置文件中的配置节点。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.ViewMode">
+            <summary>
+            获取与设置视图模式。默认为 AllItems 模式。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.CommunicationDirection">
+            <summary>
+            获取与设置数据通信方向。默认为 Bidirect 。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.ReturnUrl">
+            <summary>
+            获取与设置返回地址。默认为空。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.CompletedUrl">
+            <summary>
+            获取与设置完成地址。默认为空。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.IsInitSelectData">
+            <summary>
+            获取与设置是否初始检索数据。默认为 true 。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.RowSelectMode">
+            <summary>
+            获取与设置行选择模式。默认为 None 。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.FunctionName">
+            <summary>
+            获取与设置功能名称。默认为空字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.Properties">
+            <summary>
+            获取所有 Property 配置节点的配置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.Controls">
+            <summary>
+            获取所有 Control 配置节点的配置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.Urls">
+            <summary>
+            获取所有 Url 配置节点的配置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.UrlRoleMappings">
+            <summary>
+            获取所有 UrlRoleMapping 配置节点的配置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.CommunicationObjects">
+            <summary>
+            获取所有 CommunicationObject 配置节点的配置。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.UserControlConfig.DataColumns">
+            <summary>
+            获取所有 DataColumn 配置节点的配置。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.UserControlConfig.Property">
+            <summary>
+            配置节点 Property 配置。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Form">
+            <summary>
+            表单解析器。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Form.#ctor(System.String,System.String)">
+            <summary>
+            构造方法。
+            </summary>
+            <param name="xmlTemplateFileName">模板文件名。</param>
+            <param name="name">表单名称。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Form.UpdateXmlNodes">
+            <summary>
+            更新 Xml 节点数据。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.XmlNode">
+            <summary>
+            获取模板文件中的配置节点。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.TemplateFile">
+            <summary>
+            模板文件名称。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.FieldPrefix">
+            <summary>
+            字段名前缀。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.Fields">
+            <summary>
+            获得所有字段。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Form.Field">
+            <summary>
+            表单。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.Field.Value">
+            <summary>
+            字段值。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.Field.MinValue">
+            <summary>
+            最小值。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.Field.MaxValue">
+            <summary>
+            最大值。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Form.Field.Description">
+            <summary>
+            字段值。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Form.FieldCollection">
+            <summary>
+            表单集合。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.Form.FieldCollection.CreateForm(System.String)">
+            <summary>
+            创建表单。
+            </summary>
+            <param name="name">表单名称。</param>
+            <returns>表单。</returns>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.FormParser">
+            <summary>
+            表单解析控件。
+            </summary>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.FormParser.OnLoad(System.EventArgs)">
+            <summary>
+            引发 FormParser 的 Load 事件。
+            </summary>
+            <param name="e">包含事件数据的参数对象。</param>
+        </member>
+        <member name="M:eSchool.Web.UI.WebControls.FormParser.OnPreRender(System.EventArgs)">
+            <summary>
+            引发 FormParser 的 PreRender 事件。
+            </summary>
+            <param name="e">包含事件数据的参数对象。</param>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.FormParser.Form">
+            <summary>
+            被解析的表单对象。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.FormParser.FormName">
+            <summary>
+            表单名称。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.FormParser.DocumentContent">
+            <summary>
+            Xml 文本。
+            </summary>
+        </member>
+        <member name="T:eSchool.Web.UI.WebControls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.ConfigAttributeNotFound">
+            <summary>
+              查找类似 The attribute {0} of the node {1} is not found in the config file. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.ConfigIllegalAttribute">
+            <summary>
+              查找类似 The attribute {0} of the node {1} is illegal in the config file. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.ConfigNodeNotFound">
+            <summary>
+              查找类似 The node {0} is not found in the config file. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.ExportFile">
+            <summary>
+              查找类似 ExportFile.xls 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.ExportTitle">
+            <summary>
+              查找类似 ExportData 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.PageConfigControlText">
+            <summary>
+              查找类似 Config 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:eSchool.Web.UI.WebControls.Properties.Resources.PageConfigControlTipText">
+            <summary>
+              查找类似 You can config the control in page configing mode. 的本地化字符串。
+            </summary>
+        </member>
+    </members>
+</doc>

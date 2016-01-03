@@ -1,0 +1,9 @@
+D:\visual studio 2010\Projects\server\SYNC\Web\bin\SYNC.Web.dll
+D:\visual studio 2010\Projects\server\SYNC\Web\bin\SYNC.Web.pdb
+D:\visual studio 2010\Projects\server\SYNC\Web\bin\SYNC.dll
+D:\visual studio 2010\Projects\server\SYNC\Web\bin\SYNC.pdb
+D:\visual studio 2010\Projects\server\SYNC\Web\bin\eSchool.Web.UI.WebControls.pdb
+D:\visual studio 2010\Projects\server\SYNC\Web\bin\eSchool.Web.UI.WebControls.xml
+D:\visual studio 2010\Projects\server\SYNC\Web\obj\Debug\ResolveAssemblyReference.cache
+D:\visual studio 2010\Projects\server\SYNC\Web\obj\Debug\SYNC.Web.dll
+D:\visual studio 2010\Projects\server\SYNC\Web\obj\Debug\SYNC.Web.pdb

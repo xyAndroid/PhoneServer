@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{9B62B2EF-F933-4480-A6CA-51729CF0A9A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.WebControls", "WebControls\Web.UI.WebControls.csproj", "{4BE59038-1469-489B-AF56-668E9DFC413D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{49428ADC-88F0-403D-83E0-F2B9D5D00933}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B62B2EF-F933-4480-A6CA-51729CF0A9A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B62B2EF-F933-4480-A6CA-51729CF0A9A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B62B2EF-F933-4480-A6CA-51729CF0A9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B62B2EF-F933-4480-A6CA-51729CF0A9A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE59038-1469-489B-AF56-668E9DFC413D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE59038-1469-489B-AF56-668E9DFC413D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE59038-1469-489B-AF56-668E9DFC413D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE59038-1469-489B-AF56-668E9DFC413D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49428ADC-88F0-403D-83E0-F2B9D5D00933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49428ADC-88F0-403D-83E0-F2B9D5D00933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49428ADC-88F0-403D-83E0-F2B9D5D00933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49428ADC-88F0-403D-83E0-F2B9D5D00933}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

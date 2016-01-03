@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ConfigedControls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="ConfigedControl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PropertyValues">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PropertyValue">
+                      <xs:complexType>
+                        <xs:attribute name="Name" type="xs:string" use="required" />
+                        <xs:attribute name="Value" type="xs:string" use="required" />
+                        <xs:attribute name="Roles" type="xs:string" use="optional" default=""/>
+                        <xs:attribute name="PageEffective" type="PageEffective" use="optional" default="Initial" />
+                        <xs:attribute name="PageEvent" type="PageEvent" use="optional" default="PreRenderComplete" />
+                        <xs:attribute name="Format" type="xs:string" use="optional" default="{0}" />
+                        <xs:attribute name="RelativeProperty" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="DependentProperty" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="DependentPropertyValue" type="xs:string" use="optional" default="" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CommunicateObjects">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="CommunicateObject">
+                      <xs:complexType>
+                        <xs:attribute name="Name" type="xs:string" use="required" />
+                        <xs:attribute name="KeyName" type="xs:string" use="optional" />
+                        <xs:attribute name="RelativeProperty" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Communications">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Communication">
+                      <xs:complexType>
+                        <xs:attribute name="IgnoreRedirectProperty" type="xs:string" use="optional" default=""/>
+                        <xs:attribute name="Control" type="xs:string" use="required" />
+                        <xs:attribute name="PageEvent" type="PageEvent" use="optional" default="Load" />
+                        <xs:attribute name="Path" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="Roles" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="IsReturn" type="xs:boolean" use="optional" default="false" />
+                        <xs:attribute name="RelativeProperty" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="CommunicateObjects" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="DependentProperty" type="xs:string" use="optional" default="" />
+                        <xs:attribute name="DependentPropertyValue" type="xs:string" use="optional" default="" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReservedProperties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservedProperty">
+                      <xs:complexType>
+                        <xs:attribute name="Name" type="xs:string" use="required" />
+                        <xs:attribute name="PageEffective" type="PageEffective" use="optional" default="Initial" />
+                        <xs:attribute name="SavePageEvent" type="PageEvent" use="optional" default="PreRenderComplete" />
+                        <xs:attribute name="RestorePageEvent" type="PageEvent" use="optional" default="PreLoad" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:string" use="required" />
+            <xs:attribute name="IncludeFile" type="xs:string" use="optional" />
+            <xs:attribute name="IncludeMode" type="IncludeMode" use="optional" default="Header" />
+            <xs:attribute name="ReferenceID" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="PageEvent">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PreLoad"></xs:enumeration>
+      <xs:enumeration value="Load"></xs:enumeration>
+      <xs:enumeration value="Bubble"></xs:enumeration>
+      <xs:enumeration value="LoadComplete"></xs:enumeration>
+      <xs:enumeration value="PreRender"></xs:enumeration>
+      <xs:enumeration value="PreRenderComplete"></xs:enumeration>
+      <xs:enumeration value="ControlLoad"></xs:enumeration>
+      <xs:enumeration value="ControlDataBinding"></xs:enumeration>
+      <xs:enumeration value="ControlPreRender"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PageEffective">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Initial"></xs:enumeration>
+      <xs:enumeration value="PostBack"></xs:enumeration>
+      <xs:enumeration value="Always"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IncludeMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Header"></xs:enumeration>
+      <xs:enumeration value="Append"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

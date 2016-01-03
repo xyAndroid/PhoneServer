@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!--主节点-->
+  <siteMapNode url="~/Default.aspx" title="手机同步助手"  description="">
+    <!--导航栏-->
+    <siteMapNode title="我的信息" roles="Administrator" description="(/AdministratorInfo/Form/*)" url="~/AdministratorInfo/Form.aspx">
+      <siteMapNode url="" title="" roles="Administrator" />
+    </siteMapNode>
+    <siteMapNode title="用户管理" roles="Administrator" description="(/ManagerTeacher/Form/*)" url="~/ManagerTeacher/Form.aspx">
+      <siteMapNode url="" title="" roles="Administrator" />
+    </siteMapNode>
+  </siteMapNode>
+
+</siteMap>
